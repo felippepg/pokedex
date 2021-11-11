@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 import { api } from "../../utils/api";
 import style from "./style.module.scss";
+import global from "../../styles/global.module.scss"
+import { Button } from "../../components/Button";
 
 type IPokemon = {
   height: number
@@ -24,9 +26,10 @@ type IPokemon = {
 export const Pokemon = () => {
   const location = useLocation()
   const [searchPokemon, setSearchPokemon] = useState<string>('')
-  const [pokemon, setPokemon] = useState<string>(new URLSearchParams(location.search).get('name') as string)
   const [findPokemon, setFindPokemon] = useState<IPokemon>()
   const [notFound, setNotFound] = useState<Boolean>(false)
+
+  const pokemon = new URLSearchParams(location.search).get('name') as string
 
   useEffect(() => {
     api.get<IPokemon>(pokemon.toLowerCase()).then(res => {
@@ -39,14 +42,8 @@ export const Pokemon = () => {
   }, [])
 
   return (
-    <div className={style.contentWrapper}>
-      <div className={style.banner}>
-        <div className={style.titleBackground}>
-          <h3>pokedex</h3>
-        </div>
-      </div>
-
-      <div className={style.mainContent}>
+    <div className={global.contentWrapper}>
+      <div className={global.mainContent}>
         <form action="/pokemon" method="get">
           <input
             type="text"
@@ -60,7 +57,7 @@ export const Pokemon = () => {
         </form>
         {!!notFound ? <h1>Pokemon Não encontrado</h1>:
 
-          <div className={style.listPokemons}>
+          <div className={global.listPokemons}>
             <div className={style.backgroundText}>
               <h1>{findPokemon?.name}</h1>
             </div>
@@ -70,14 +67,12 @@ export const Pokemon = () => {
               <h4>{`Type:  ${findPokemon?.types[0].type.name}`}</h4>
               <h4>{`Weight:  ${findPokemon?.weight}`}</h4>
             </div>
-
-        </div>
+          </div>
         }
-
 
         <div className={style.bannerfooter}>
           <div className={style.buttonGroup}>
-            <button type="button" onClick={() => window.location.href="http://localhost:3000"}>Back</button>
+            <Button name="Back" click={() => window.location.href="http://localhost:3000"}/>
           </div>
         </div>
       </div>

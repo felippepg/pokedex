@@ -1,0 +1,25 @@
+.banner {
+  width: 1000px;
+  margin: auto;
+  height: 100px;
+  background-color: #EE3232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .titleBackground {
+    background-color: #000;
+    width: 342px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-size: 20px;
+      line-height: 27px;
+      color: #0DFF25;
+      text-transform: uppercase;
+    }
+  }
+}

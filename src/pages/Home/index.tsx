@@ -1,7 +1,9 @@
 import React, { FormEvent, useEffect, useState } from "react";
+import { Button } from "../../components/Button";
 import { api } from "../../utils/api";
 
 import style from "./style.module.scss";
+import global from "../../styles/global.module.scss";
 
 type Pokemon = {
   results:[{
@@ -49,14 +51,8 @@ export const Home = () => {
 
 
   return (
-    <div className={style.contentWrapper}>
-      <div className={style.banner}>
-        <div className={style.titleBackground}>
-          <h3>pokedex</h3>
-        </div>
-      </div>
-
-      <div className={style.mainContent}>
+    <div className={global.contentWrapper}>
+      <div className={global.mainContent}>
         <form action="/pokemon" method="get">
           <input
             type="text"
@@ -69,7 +65,7 @@ export const Home = () => {
           <button type="submit">Ir</button>
         </form>
 
-        <div className={style.listPokemons}>
+        <div className={global.listPokemons}>
           {pokemon?.results.map((item, index) => {
             return (
               <div key={index} className={style.pokemonItem}>
@@ -82,8 +78,8 @@ export const Home = () => {
 
         <div className={style.bannerfooter}>
           <div className={style.buttonGroup}>
-            <button type="button" onClick={() => previusPage()}>Back</button>
-            <button type="button" onClick={() => nextPage()}>Next</button>
+            <Button name="Back" click={() =>previusPage()}/>
+            <Button name="Next" click={() =>nextPage()}/>
           </div>
         </div>
       </div>
