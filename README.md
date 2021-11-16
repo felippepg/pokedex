@@ -5,8 +5,8 @@
 </h1>
 
 ## Descrição do Projeto
-<p align="center">Esse projeto tem como intuito recriar uma pokedex utilizando uma api externa chamada [PokeAPI](https://pokeapi.co/). O projeto foi
-desenvolvido em React utlizando conceitos como flexbox e SASS e teve o seu layout previamente desenhado no Adobe XD</p>
+Esse projeto tem como intuito recriar uma pokedex utilizando uma api externa chamada [PokeAPI](https://pokeapi.co). O projeto foi
+desenvolvido em React utlizando conceitos como flexbox e SASS e teve o seu layout previamente desenhado no Adobe XD
 
 ### Pré-requisitos
 
@@ -34,6 +34,18 @@ $ yarn dev ou npm run dev
 
 <h1 align="center">
     <img alt="Layout" title="Layout" src="./src/assets/Layout Adobe.png" />
+</h1>
+
+### :pushpin:	Home
+
+<h1 align="center">
+    <img alt="Home" title="Home" src="./src/assets/Home.png" />
+</h1>
+
+### :pushpin:	Informações sobre o Pokemon
+
+<h1 align="center">
+    <img alt="Pokemon" title="Pokemon" src="./src/assets/Pokemon.png" />
 </h1>
 
 ## 🛠 Tecnologias
