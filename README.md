@@ -5,8 +5,8 @@
 </h1>
 
 ## Descrição do Projeto
-Esse projeto tem como intuito recriar uma pokedex utilizando uma api externa chamada [PokeAPI](https://pokeapi.co/). O projeto foi
-desenvolvido em React utlizando conceitos como flexbox e SASS e teve o seu layout previamente desenhado no Adobe XD
+<p align="center">Esse projeto tem como intuito recriar uma pokedex utilizando uma api externa chamada [PokeAPI](https://pokeapi.co/). O projeto foi
+desenvolvido em React utlizando conceitos como flexbox e SASS e teve o seu layout previamente desenhado no Adobe XD</p>
 
 ### Pré-requisitos
 
@@ -28,6 +28,7 @@ $ yarn OU npm install (dependendo do seu gerenciador de pacotes)
 
 # Para iniciar o projeto em modo de desenvolvedor 
 $ yarn dev ou npm run dev
+```
 
 ### :computer: Layout feito no Adobe XD
 
