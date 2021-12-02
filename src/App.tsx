@@ -11,12 +11,10 @@ function App() {
     <>
       <Header />
         <BrowserRouter basename={BASE_URL}>
-          <HashRouter>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/pokemon" component={Pokemon} />
             </Switch>
-          </HashRouter>
       </BrowserRouter>
     </>
   );

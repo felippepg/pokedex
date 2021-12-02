@@ -22,12 +22,12 @@ type IPokemon = {
     }
   }
 }
-
 export const Pokemon = () => {
   const location = useLocation()
   const [searchPokemon, setSearchPokemon] = useState<string>('')
   const [findPokemon, setFindPokemon] = useState<IPokemon>()
   const [notFound, setNotFound] = useState<Boolean>(false)
+  const BASE_URL = import.meta.env.VITE_PUBLIC_URL as string
 
   const pokemon = new URLSearchParams(location.search).get('name') as string
 
@@ -72,7 +72,7 @@ export const Pokemon = () => {
 
         <div className={style.bannerfooter}>
           <div className={style.buttonGroup}>
-            <Button name="Back" click={() => window.location.href="http://localhost:3000"}/>
+            <Button name="Back" click={() => window.location.href=BASE_URL}/>
           </div>
         </div>
       </div>
