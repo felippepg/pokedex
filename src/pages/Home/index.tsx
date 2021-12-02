@@ -4,7 +4,6 @@ import { api } from "../../utils/api";
 
 import style from "./style.module.scss";
 import global from "../../styles/global.module.scss";
-
 type Pokemon = {
   results:[{
     name: string,
@@ -70,7 +69,7 @@ export const Home = () => {
             return (
               <div key={index} className={style.pokemonItem}>
                 <h1>{item.name}</h1>
-                <a href={`${process.env.PUBLIC_URL}}/pokemon?name=${item.name}`}>Saiba mais</a>
+                <a href={`${import.meta.env.VITE_PUBLIC_URL}/pokemon?name=${item.name}`}>Saiba mais</a>
               </div>
             )
           })}
