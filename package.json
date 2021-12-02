@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d buid",
     "serve": "vite preview",
     "lint": "eslint ./src/**/**/ --ext .ts",
     "lint:fix": "yarn lint --fix"
@@ -16,6 +18,7 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
+    "@types/node": "^16.11.11",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router": "^5.1.17",
@@ -33,6 +36,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"

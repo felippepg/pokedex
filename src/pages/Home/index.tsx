@@ -70,7 +70,7 @@ export const Home = () => {
             return (
               <div key={index} className={style.pokemonItem}>
                 <h1>{item.name}</h1>
-                <a href={`http://localhost:3000/pokemon?name=${item.name}`}>Saiba mais</a>
+                <a href={`${process.env.PUBLIC_URL}}/pokemon?name=${item.name}`}>Saiba mais</a>
               </div>
             )
           })}
