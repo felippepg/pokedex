@@ -69,7 +69,7 @@ export const Home = () => {
             return (
               <div key={index} className={style.pokemonItem}>
                 <h1>{item.name}</h1>
-                <a href={`${import.meta.env.VITE_PUBLIC_URL}/pokemon?name=${item.name}`}>Saiba mais</a>
+                <a href={`http://localhost:3000/pokemon?name=${item.name}`}>Saiba mais</a>
               </div>
             )
           })}

@@ -72,7 +72,7 @@ export const Pokemon = () => {
 
         <div className={style.bannerfooter}>
           <div className={style.buttonGroup}>
-            <Button name="Back" click={() => window.location.href=BASE_URL}/>
+            <Button name="Back" click={() => window.location.href="/"}/>
           </div>
         </div>
       </div>
